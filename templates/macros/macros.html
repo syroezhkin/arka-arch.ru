@@ -18,10 +18,9 @@
 {% macro persons(image="/images/no_image.jpg", name="", note="") %}
   {% set width = config.extra.project_symbol_width %}
   {% set height = config.extra.project_symbol_width %}
-  {% set symbol = resize_image(path=image, width=width, height=height) | safe %}
 
   <figure class="arkanafts__item">
-    <img class="arkanafts__item__image" src="{{ symbol.url | safe }}" alt="">
+    <img class="arkanafts__item__image" src="{{ image }}" alt="">
     <figcaption class="arkanafts__item__caption">
       <p>
         <b>
