@@ -1,0 +1,13 @@
+{% import "macros/macros.html" as macros %}
+
+<div class="arkanafts">
+  {% for person in config.extra.arkanafts %}
+
+    {{ macros::persons(
+      image = person.image,
+      name = person.name,
+      note = person.note,
+    ) }}
+
+  {% endfor %}
+</div>

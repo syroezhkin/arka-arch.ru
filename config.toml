@@ -1,0 +1,53 @@
+# The URL the site will be built for
+base_url = "http://arka-arch.ru"
+
+title = "Авторская архитектурная студия «Арка»"
+description = ""
+default_language = "ru"
+
+# Whether to automatically compile all Sass files in the sass directory
+compile_sass = true
+
+generate_feed = true
+
+# Whether to build a search index to be used later on by a JavaScript library
+build_search_index = false
+
+taxonomies = [
+    { name = "categories", feed = true },
+]
+
+[markdown]
+# Whether to do syntax highlighting
+# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
+highlight_code = false
+
+[extra]
+menu_links = [
+  { url = "/", name = "Проекты" },
+  { url = "/about", name = "О нас" },
+]
+
+arkanafts = [
+  { image = "/images/vyacheslav_uvarov.jpg",   name = "Вячеслав Уваров",    note = "архитектор" },
+  { image = "/images/vladimir_syroezhkin.jpg", name = "Владимир Сыроежкин", note = "архитектор" },
+  { image = "/images/mikhail_nikonenko.jpg",   name = "Михаил Никоненко",   note = "архитектор" },
+  { image = "/images/dmitriy_kulikov.jpg",     name = "Дмитрий Куликов",    note = "техник-архитектор" },
+  { image = "/images/irina_litvinova.jpg",     name = "Ирина Литвинова",    note = "архитектор" },
+  { image = "/images/anastasia_shurupova.jpg", name = "Анастасия Шурупова", note = "архитектор" },
+]
+
+contacts = [ 
+  "+7 952 110 31 36",
+  { url = "mailto:nikonenko@arka-arch.ru", name = "nikonenko@arka-arch.ru" },
+  "г. Калининград, ул. Гаражная, д. 2а, каб. №207",
+]
+
+social = [ 
+#  "+7 952 110 31 36",
+#  { url = "/", name = "RSS" }
+]
+
+project_image_height = 512
+project_symbol_width = 256
+project_symbol_height = 159

@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% import "macros/macros.html" as macros %}
+
+{% block content %}
+  {{ macros::categories(categories = get_taxonomy(kind="categories")) }}
+
+  <main>
+    {% block title %} {% endblock title %}
+
+    <div class="projects">
+      {% for page in section.pages %}
+
+        {{ macros::figure(
+          image = page.assets | sort | first,
+          caption = page.title,
+          permalink = page.permalink
+        ) }}
+
+      {% endfor %}
+    </div>
+  </main>
+{% endblock content %}

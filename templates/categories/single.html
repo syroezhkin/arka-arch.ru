@@ -1,0 +1,25 @@
+{% extends "projects.html" %}
+
+{% block title %}
+  {{ term.name }}
+{% endblock title %}
+
+{% block content %}
+  {{ macros::categories(categories = get_taxonomy(kind="categories")) }}
+
+  <main>
+    <h1>
+      {{ term.name }}
+    </h1>
+
+    <div class="projects">
+      {% for post in term.pages %}
+        {{ macros::figure(
+          image = post.assets | sort | first,
+          caption = post.title, 
+          permalink = post.permalink
+        ) }}
+      {% endfor %}
+    </div>
+  </main>
+{% endblock content %}

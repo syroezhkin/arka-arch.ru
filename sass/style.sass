@@ -1,0 +1,266 @@
+//*
+  background-color: rgba(0, 0, 0, 0.05)
+
+$primary_color: #305090
+
+a
+  color: $primary_color
+  text-decoration: none
+  border-bottom: 1px solid
+  border-color: lighten($primary_color, 50%)
+
+  &:visited
+    color: #603090
+    border-color: lighten(#603090, 50%)
+
+  &:active
+    color: #903530
+    border-color: lighten(#903530, 50%)
+
+
+article, main
+  margin: 40px
+
+  p
+    max-width: 600px
+
+  ul
+    padding-left: 0px
+    list-style: none
+
+    li
+      margin: 1em 0px
+
+
+.body
+  margin: auto 
+  display: grid
+  grid-auto-flow: row
+  // min-width: 320px
+  // max-width: 1600px
+  font-family: sans
+  font-size: 16px
+
+
+.header
+  padding: 0px 40px
+  height: 80px
+  display: flex
+  align-items: center
+  box-shadow: 0 6px 28px rgba(158, 177, 212, .14)
+
+  &__logo
+    margin-right: 10px
+    width: 37px
+    height: 44px
+    border-bottom: none
+
+  &__nav
+    display: flex
+    white-space: nowrap
+    text-transform: uppercase
+    letter-spacing: .07em;
+
+    &__link
+      margin-left: 25px 
+      text-decoration: none
+      padding: 2px 0px
+      border-bottom: 2px solid transparent
+      transition: border-color 0.3s ease
+
+      &:hover
+        border-color: $primary_color
+
+      &:visited
+        color: $primary_color
+        border-color: $primary_color
+
+      &_active
+        border-color: $primary_color
+
+  &__title
+    text-decoration: none
+    color: black
+    border-bottom: none
+
+    &:visited
+      color: black
+
+
+.projects
+  display: grid
+  grid-template-columns: repeat(6, minmax(0, 1fr))
+  column-gap: 3.5%
+  row-gap: 40px
+
+  &__item
+    margin: 0
+
+    &__link
+      border-bottom: none
+
+    &:hover &__image
+      filter: grayscale(0)
+
+    &__image
+      width: 100%
+      filter: grayscale(1)
+      transition: filter 0.3s ease
+
+      &:hover
+        border-color: black
+
+      &_active
+        border-color: black
+
+  &__title
+    text-decoration: none
+
+.arkanafts
+  display: grid
+  grid-template-columns: repeat(6, minmax(0, 1fr))
+  column-gap: 3.5%
+  row-gap: 40px
+
+  &__item
+    margin: 0
+
+    &:hover &__image
+      filter: grayscale(0)
+
+    &__image
+      width: 100%
+      filter: grayscale(1)
+      transition: filter 0.3s ease
+
+      &:hover
+        border-color: black
+
+      &_active
+        border-color: black
+
+    &__caption
+      display: flex
+      flex-direction: column
+
+      p
+        margin-top: 0.5em
+        margin-bottom: 0
+
+  &__title
+    text-decoration: none
+
+
+.scroller
+  margin-right: -40px
+
+  &__item
+    margin-right: 10px
+
+
+.footer
+  display: flex
+  margin: 40px
+
+  &__contacts
+    display: flex
+
+    &__item
+      margin-right: 40px
+      margin-bottom: 0.5em
+
+      &:last-child
+        margin-right: 0px
+
+.social
+  display: flex
+  margin-left: auto
+
+  &__item
+    margin-right: 40px
+
+    &:last-child
+      margin-right: 0px
+
+.categories
+  display: flex
+  list-style-type: none
+  margin-top: 40px
+  margin-bottom: 0px
+
+  &__item
+    margin-right: 25px
+
+.address
+  display: flex
+
+  &__item
+    font-style: normal
+    margin-right: 40px
+
+    h4
+      margin-bottom: 0.5em
+
+    p
+      margin-top: 0
+
+
+@media (max-width: 1400px)
+
+  .projects
+    grid-template-columns: repeat(5, minmax(0, 1fr))
+
+
+@media (max-width: 1200px)
+
+  .projects
+    grid-template-columns: repeat(4, minmax(0, 1fr))
+
+
+@media (max-width: 992px)
+
+  .projects
+    grid-template-columns: repeat(3, minmax(0, 1fr))
+
+  .arkanafts
+    grid-template-columns: repeat(3, minmax(0, 1fr))
+
+  .footer
+    &__contacts
+      flex-direction: column
+
+  .scroller
+    margin: 0 -40px
+
+  .the-map
+    margin: 0 -40px
+
+    &__item
+      img
+        //max-width: calc(100vw - 40px)
+        height: 55vw
+        max-height: 100vh
+
+
+@media (max-width: 768px)
+
+  .header
+    
+    &__title
+      display: none
+
+  .projects
+    grid-template-columns: repeat(2, minmax(0, 1fr))
+
+  .arkanafts
+    grid-template-columns: repeat(3, minmax(0, 1fr))
+
+
+@media (max-width: 576px)
+
+  .projects
+    grid-template-columns: repeat(1, minmax(0, 1fr))
+
+  .arkanafts
+    grid-template-columns: repeat(2, minmax(0, 1fr))
+

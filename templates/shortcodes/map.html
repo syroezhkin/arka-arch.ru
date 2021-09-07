@@ -1,0 +1,39 @@
+<div class="the-map">
+  <div id="map" style="width: 100%; height: 400px"></div>
+</div>
+
+<script type="text/javascript" src="http://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+
+<script type="text/javascript">
+  ymaps.ready(init);
+  var myMap, myPlacemark;
+
+  function init() {
+    myMap = new ymaps.Map("map", {
+      center: [54.724600, 20.505300],
+      zoom: 16,
+      controls: ["zoomControl", "fullscreenControl"],
+    });
+
+    myMap.behaviors
+      // Отключаем часть включенных по умолчанию поведений:
+      //  - drag - перемещение карты при нажатой левой кнопки мыши;
+      //  - magnifier.rightButton - увеличение области, выделенной правой кнопкой мыши.
+      .disable(["scrollZoom"]);
+
+    myPlacemark = new ymaps.Placemark([54.724600, 20.505300], {
+      hintContent: "Авторская архитектурная студия «Арка»",
+      balloonContentHeader: "Авторская архитектурная студия «Арка»",
+      balloonContent:
+        "г. Калининград, ул. Гаражная, д. 2а,</br>каб. №207",
+    });
+
+    myMap.geoObjects.add(myPlacemark);
+
+    // Открываем балун на карте (без привязки к геообъекту).
+    myPlacemark.balloon.open([54.727131, 20.50083], {
+      // Опция: не показываем кнопку закрытия.
+      closeButton: true,
+    });
+  }
+</script>

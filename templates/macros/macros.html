@@ -1,0 +1,50 @@
+{% macro figure(image="/images/no_image.jpg", caption="", permalink="") %}
+  {% set width = config.extra.project_symbol_width %}
+  {% set height = config.extra.project_symbol_height %}
+  {% set symbol = resize_image(path=image, width=width, height=height) | safe %}
+
+  <figure class="projects__item">
+    <a class="projects__item__link" href="{{ permalink | safe }}">
+      <img class="projects__item__image" src="{{ symbol.url | safe }}" alt="">
+    </a>
+    <figcaption>
+      <a href="{{ permalink | safe }}">
+        {{ caption }}
+      </a>
+    </figcaption>
+  </figure>
+{% endmacro figure %}
+
+{% macro persons(image="/images/no_image.jpg", name="", note="") %}
+  {% set width = config.extra.project_symbol_width %}
+  {% set height = config.extra.project_symbol_width %}
+  {% set symbol = resize_image(path=image, width=width, height=height) | safe %}
+
+  <figure class="arkanafts__item">
+    <img class="arkanafts__item__image" src="{{ symbol.url | safe }}" alt="">
+    <figcaption class="arkanafts__item__caption">
+      <p>
+        <b>
+          {{ name }}
+        </b>
+        <p>
+          {{ note }}
+        </p>
+      </p>
+    </figcaption>
+  </figure>
+{% endmacro persons %}
+
+{% macro categories(categories) %}
+  <aside>
+    <ul class="categories">
+      {% for category in categories.items %}
+        <li class="categories__item">
+          <a href="{{ category.permalink }}">
+            {{ category.name }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </aside>
+{% endmacro categories %}

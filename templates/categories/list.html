@@ -1,0 +1,18 @@
+{% extends "projects.html" %}
+
+{% block content %}
+  <main>
+    <div class="projects">
+      {% for category in terms %}
+        {% set page = category.pages | first %}
+
+        {{ macros::figure(
+          image = page.assets | sort | first,
+          caption = category.name, 
+          permalink = category.permalink
+        ) }}
+
+      {% endfor %}
+    </div>
+  </main>
+{% endblock content %}
