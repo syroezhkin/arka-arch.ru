@@ -20,7 +20,7 @@
   {% set height = config.extra.project_symbol_width %}
 
   <figure class="arkanafts__item">
-    <img class="arkanafts__item__image" src="{{ image }}" alt="">
+    <img class="arkanafts__item__image" src="{{ get_url(path="image") | safe }}" alt="">
     <figcaption class="arkanafts__item__caption">
       <p>
         <b>
