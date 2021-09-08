@@ -28,14 +28,14 @@
     <header class="header">
       {% if current_path == "/" %}
         <div class="header__logo">
-          <img src="/images/logo.svg" alt="Логотип студии">
+          <img src="{{ get_url(path="/images/logo.svg") }}" alt="Логотип студии">
         </div>
         <div class="header__title">{{ config.title }}</div>
       {% else %}
-        <a class="header__logo" href="/">
+        <a class="header__logo" href="{{  get_url(path="/") }}">
           <img src="/images/logo.svg" alt="Логотип студии">
         </a>
-        <a class="header__title" href="/">{{ config.title }}</a>
+        <a class="header__title" href="{{ get_url(path="/") }}">{{ config.title }}</a>
       {% endif %}
 
 
@@ -47,7 +47,7 @@
             {% set path = current_path | trim_end_matches(pat="/") %}
           {% endif %}
           <a class="header__nav__link {% if url == path %}header__nav__link_active{% endif %}"
-              href="{{ url }}">
+              href="{{ get_url(path=url) }}">
             {{ link.name }}
           </a>
         {% endfor %}
