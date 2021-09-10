@@ -38,8 +38,13 @@
   <aside>
     <ul class="categories">
       {% for category in categories.items %}
+	{% set url = category.permalink | trim_end_matches(pat="/") %}
+	{% set path = get_url(path="/") %}
+        {% if path != current_path %}
+          {% set path = get_url(path=current_path) %}
+        {% endif %}
         <li class="categories__item">
-          <a href="{{ category.permalink }}">
+          <a class="categories__item__link {% if url == path %}categories__item__link_active{% endif %}" href="{{ category.permalink }}">
             {{ category.name }}
           </a>
         </li>

@@ -88,7 +88,6 @@ article, main
           color: $link_current
           border-color: $link_current
 
-
   &__title
     text-decoration: none
     color: black
@@ -126,6 +125,7 @@ article, main
 
   &__title
     text-decoration: none
+
 
 .arkanafts
   display: grid
@@ -187,6 +187,7 @@ article, main
       &:last-child
         margin-right: 0px
 
+
 .social
   display: flex
   margin-left: auto
@@ -197,6 +198,7 @@ article, main
     &:last-child
       margin-right: 0px
 
+
 .categories
   display: flex
   list-style-type: none
@@ -205,6 +207,20 @@ article, main
 
   &__item
     margin-right: 25px
+
+    &__link
+
+      &_active
+        color: $link_current
+        border-color: lighten($link_current, 50%)
+
+        &:visited
+          color: $link_current
+          border-color: lighten($link_current, 50%)
+
+        &:hover
+          border-color: $link_current
+
 
 .address
   display: flex
@@ -224,8 +240,8 @@ article, main
   filter: grayscale(1)
   transition: filter 0.3s ease
 
-.the-map:hover
-  filter: grayscale(0)
+  &:hover
+    filter: grayscale(0)
 
 
 @media (max-width: 1400px)
