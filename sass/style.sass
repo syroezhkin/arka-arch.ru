@@ -100,16 +100,17 @@ article, main
   display: grid
   grid-template-columns: repeat(5, minmax(0, 1fr))
   column-gap: 3.5%
-  row-gap: 40px
+  row-gap: 30px
 
   &__item
     margin: 0
 
-    &__link
-      border-bottom: none
-
     &:hover &__image
       filter: grayscale(0)
+
+    &:hover figcaption
+      opacity: 1
+      transform: translateY(8px);
 
     &__image
       width: 100%
@@ -121,6 +122,13 @@ article, main
 
       &_active
         border-color: black
+
+    &__link
+      border-bottom: none
+
+    figcaption
+      opacity: 0
+      transition: opacity 0.3s ease, transform .2s ease
 
   &__title
     text-decoration: none
