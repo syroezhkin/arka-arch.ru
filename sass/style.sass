@@ -1,21 +1,27 @@
 //*
   background-color: rgba(0, 0, 0, 0.05)
 
-$primary_color: #305090
+$link: #000000
+$link_active: #903530
+$link_current: #305090
 
 a
-  color: $primary_color
+  color: $link
   text-decoration: none
   border-bottom: 1px solid
-  border-color: lighten($primary_color, 50%)
+  border-color: lighten($link, 75%)
 
   &:visited
-    color: #603090
-    border-color: lighten(#603090, 50%)
+    color: lighten($link, 20%)
+    border-color: lighten($link, 75%)
 
   &:active
-    color: #903530
-    border-color: lighten(#903530, 50%)
+    color: $link_active
+    border-color: lighten($link_active, 50%)
+
+  &:hover
+    color: $link
+    border-color: $link
 
 
 article, main
@@ -65,16 +71,27 @@ article, main
       padding: 2px 0px
       border-bottom: 2px solid transparent
       transition: border-color 0.3s ease
-
-      &:hover
-        border-color: $primary_color
+      color: $link
 
       &:visited
-        color: $primary_color
-        border-color: $primary_color
+        color: $link
+        border-color: $link
+
+      &:hover
+        border-color: $link
 
       &_active
-        border-color: $primary_color
+        color: $link_current
+        border-color: $link_current
+
+        &:visited
+          color: $link_current
+          border-color: $link_current
+
+        &:hover
+          color: $link_current
+          border-color: $link_current
+
 
   &__title
     text-decoration: none
