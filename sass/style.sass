@@ -1,21 +1,25 @@
-//*
-  background-color: rgba(0, 0, 0, 0.05)
+$link: #000000
+$link_active: #903530
+$link_current: #305090
 
-$primary_color: #305090
 
 a
-  color: $primary_color
+  color: $link
   text-decoration: none
   border-bottom: 1px solid
-  border-color: lighten($primary_color, 50%)
+  border-color: lighten($link, 80%)
 
   &:visited
-    color: #603090
-    border-color: lighten(#603090, 50%)
+    color: lighten($link, 20%)
+    border-color: lighten($link, 80%)
 
   &:active
-    color: #903530
-    border-color: lighten(#903530, 50%)
+    color: $link_active
+    border-color: lighten($link_active, 50%)
+
+  &:hover
+    color: $link
+    border-color: $link
 
 
 article, main
@@ -37,7 +41,7 @@ article, main
   display: grid
   grid-auto-flow: row
   font-family: Sans-Serif
-  font-size: 16px
+  font-size: 14px
 
 
 .header
@@ -56,25 +60,32 @@ article, main
   &__nav
     display: flex
     white-space: nowrap
-    text-transform: uppercase
-    letter-spacing: .07em;
 
     &__link
       margin-left: 25px 
       text-decoration: none
       padding: 2px 0px
-      border-bottom: 2px solid transparent
-      transition: border-color 0.3s ease
-
-      &:hover
-        border-color: $primary_color
+      border-color: lighten($link, 80%)
+      color: $link
 
       &:visited
-        color: $primary_color
-        border-color: $primary_color
+        color: $link
+        border-color: lighten($link, 80%)
+
+      &:hover
+        border-color: $link
 
       &_active
-        border-color: $primary_color
+        color: $link_current
+        border-color: lighten($link_current, 80%)
+
+        &:visited
+          color: $link_current
+          border-color: lighten($link_current, 50%)
+
+        &:hover
+          color: $link_current
+          border-color: $link_current
 
   &__title
     text-decoration: none
@@ -87,18 +98,19 @@ article, main
 
 .projects
   display: grid
-  grid-template-columns: repeat(6, minmax(0, 1fr))
+  grid-template-columns: repeat(5, minmax(0, 1fr))
   column-gap: 3.5%
-  row-gap: 40px
+  row-gap: 30px
 
   &__item
     margin: 0
 
-    &__link
-      border-bottom: none
-
     &:hover &__image
       filter: grayscale(0)
+
+    &:hover figcaption
+      opacity: 1
+      transform: translateY(8px);
 
     &__image
       width: 100%
@@ -111,8 +123,16 @@ article, main
       &_active
         border-color: black
 
+    &__link
+      border-bottom: none
+
+    figcaption
+      opacity: 0
+      transition: opacity 0.3s ease, transform .2s ease
+
   &__title
     text-decoration: none
+
 
 .arkanafts
   display: grid
@@ -174,6 +194,7 @@ article, main
       &:last-child
         margin-right: 0px
 
+
 .social
   display: flex
   margin-left: auto
@@ -184,6 +205,7 @@ article, main
     &:last-child
       margin-right: 0px
 
+
 .categories
   display: flex
   list-style-type: none
@@ -192,6 +214,20 @@ article, main
 
   &__item
     margin-right: 25px
+
+    &__link
+
+      &_active
+        color: $link_current
+        border-color: lighten($link_current, 50%)
+
+        &:visited
+          color: $link_current
+          border-color: lighten($link_current, 50%)
+
+        &:hover
+          border-color: $link_current
+
 
 .address
   display: flex
@@ -211,8 +247,8 @@ article, main
   filter: grayscale(1)
   transition: filter 0.3s ease
 
-.the-map:hover
-  filter: grayscale(0)
+  &:hover
+    filter: grayscale(0)
 
 
 @media (max-width: 1400px)

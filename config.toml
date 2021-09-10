@@ -1,6 +1,6 @@
 # The URL the site will be built for
 # base_url = "http://arka-arch.ru"
-base_url = "https://syroezhkin.github.io/arka-arch.ru/"
+base_url = "https://syroezhkin.github.io/arka-arch/"
 
 title = "Авторская архитектурная студия «Арка»"
 description = ""
@@ -30,12 +30,12 @@ menu_links = [
 ]
 
 arkanafts = [
-  { image = "/images/vyacheslav_uvarov.jpg",   name = "Вячеслав Уваров",    note = "архитектор" },
-  { image = "/images/vladimir_syroezhkin.jpg", name = "Владимир Сыроежкин", note = "архитектор" },
-  { image = "/images/mikhail_nikonenko.jpg",   name = "Михаил Никоненко",   note = "архитектор" },
-  { image = "/images/dmitriy_kulikov.jpg",     name = "Дмитрий Куликов",    note = "техник-архитектор" },
-  { image = "/images/irina_litvinova.jpg",     name = "Ирина Литвинова",    note = "архитектор" },
-  { image = "/images/anastasia_shurupova.jpg", name = "Анастасия Шурупова", note = "архитектор" },
+  { image = "/images/vyacheslav_uvarov.jpg",   name = "Вячеслав Уваров",    note = "архитектор", mail = "" },
+  { image = "/images/vladimir_syroezhkin.jpg", name = "Владимир Сыроежкин", note = "архитектор", mail="syroezhkin@arka-arch.ru" },
+  { image = "/images/mikhail_nikonenko.jpg",   name = "Михаил Никоненко",   note = "архитектор", mail="nikonenko@arka-arch.ru" },
+  { image = "/images/dmitriy_kulikov.jpg",     name = "Дмитрий Куликов",    note = "техник-архитектор", mail = "" },
+  { image = "/images/irina_litvinova.jpg",     name = "Ирина Литвинова",    note = "архитектор", mail = "" },
+  { image = "/images/anastasia_shurupova.jpg", name = "Анастасия Шурупова", note = "архитектор", mail = "" },
 ]
 
 contacts = [ 
