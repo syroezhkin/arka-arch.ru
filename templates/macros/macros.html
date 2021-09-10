@@ -15,7 +15,7 @@
   </figure>
 {% endmacro figure %}
 
-{% macro persons(image="/images/no_image.jpg", name="", note="") %}
+{% macro persons(image="/images/no_image.jpg", name="", note="", mail="") %}
   {% set width = config.extra.project_symbol_width %}
   {% set height = config.extra.project_symbol_width %}
 
@@ -26,10 +26,17 @@
         <b>
           {{ name }}
         </b>
-        <p>
-          {{ note }}
-        </p>
       </p>
+      <p>
+        {{ note }}
+      </p>
+      {% if mail != "" %}
+        <p>
+          <a href="mailto:{{ mail }}">
+            {{ mail }}
+          </a>
+        </p>
+      {% endif %}
     </figcaption>
   </figure>
 {% endmacro persons %}
