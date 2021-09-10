@@ -7,11 +7,11 @@ a
   color: $link
   text-decoration: none
   border-bottom: 1px solid
-  border-color: lighten($link, 75%)
+  border-color: lighten($link, 80%)
 
   &:visited
     color: lighten($link, 20%)
-    border-color: lighten($link, 75%)
+    border-color: lighten($link, 80%)
 
   &:active
     color: $link_active
@@ -65,24 +65,23 @@ article, main
       margin-left: 25px 
       text-decoration: none
       padding: 2px 0px
-      border-bottom: 2px solid transparent
-      transition: border-color 0.3s ease
+      border-color: lighten($link, 80%)
       color: $link
 
       &:visited
         color: $link
-        border-color: $link
+        border-color: lighten($link, 80%)
 
       &:hover
         border-color: $link
 
       &_active
         color: $link_current
-        border-color: $link_current
+        border-color: lighten($link_current, 80%)
 
         &:visited
           color: $link_current
-          border-color: $link_current
+          border-color: lighten($link_current, 50%)
 
         &:hover
           color: $link_current
