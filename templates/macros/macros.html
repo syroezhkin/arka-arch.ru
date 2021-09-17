@@ -59,3 +59,33 @@
     </ul>
   </aside>
 {% endmacro categories %}
+
+{% macro prokrutchik(page) %}
+  {% if page.assets %}
+    <div class="scroller" data-scrollbar="hidden" data-leftAlign="true" data-start="start">
+      {% for asset in page.assets | sort %}
+        <div class="scroller__item">
+          {% set height = config.extra.project_image_height %}
+          {% set image = resize_image(path=asset, height=height, op="fit_height") | safe %}
+          <img src="{{ image.url }}" alt="">
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+{% endmacro prokrutchik %}
+
+{% macro fotorama(page) %}
+  {% if page.assets %}
+    <div class="fotorama" data-nav="thumbs" data-allowfullscreen="true"
+      data-width="100%" data-max-width="900px">
+      {% for asset in page.assets | sort %}
+        {% set height = config.extra.project_image_height %}
+        {% set image = resize_image(path=asset, height=height, op="fit_height") | safe %}
+        {% set thumb = resize_image(path=asset, height=64, op="fit_height") | safe %}
+	<a href="{{ image.url }}">
+	  <img src="{{ thumb.url }}" width="{{ thumb.width }}" height="{{ thumb.height }}">
+	</a>
+      {% endfor %}
+    </div>
+  {% endif %}
+{% endmacro prokrutchik %}
