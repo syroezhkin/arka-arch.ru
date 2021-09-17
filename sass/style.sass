@@ -1,6 +1,7 @@
 $link: #000000
 $link_active: #903530
 $link_current: #305090
+$photo_background: #000000
 
 
 a
@@ -208,12 +209,14 @@ article, main
 
 .categories
   display: flex
+  flex-wrap: wrap
   list-style-type: none
   margin-top: 40px
   margin-bottom: 0px
 
   &__item
     margin-right: 25px
+    margin-bottom: 20px
 
     &__link
 
@@ -250,6 +253,19 @@ article, main
   &:hover
     filter: grayscale(0)
 
+.fotorama
+  //max-width: calc(100vw - 2 * 40px)
+  //max-width: 800px
+  //max-height: 100vh
+
+  &__stage
+    &__frame
+      background-color: $photo_background
+
+  &__nav
+    &--thumbs
+      text-align: left !important
+
 
 @media (max-width: 1400px)
 
@@ -283,6 +299,10 @@ article, main
         //max-width: calc(100vw - 40px)
         height: 55vw
         max-height: 100vh
+
+  .fotorama
+    margin: 0 -40px
+    max-width: 100vw
 
   .the-map
     margin: 0 -40px
