@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% import "macros/macros.html" as macros %}
 
 {% block title %} 
   {{ page.title }} 
@@ -10,17 +11,7 @@
 
     <h1>{{ page.title }}</h1>
 
-    {% if page.assets %}
-      <div class="scroller" data-scrollbar="hidden" data-leftAlign="true" data-start="start">
-        {% for asset in page.assets | sort %}
-          <div class="scroller__item">
-            {% set height = config.extra.project_image_height %}
-            {% set image = resize_image(path=asset, height=height, op="fit_height") | safe %}
-            <img src="{{ image.url }}" alt="">
-          </div>
-        {% endfor %}
-      </div>
-    {% endif %}
+    {{ macros::prokrutchik(page=page) }}
 
     {{ page.content | safe }}
 
