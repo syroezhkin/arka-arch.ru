@@ -73,3 +73,16 @@
     </div>
   {% endif %}
 {% endmacro prokrutchik %}
+
+{% macro fotorama(page) %}
+  {% if page.assets %}
+    <div class="fotorama" data-nav="thumbs" data-allowfullscreen="true">
+      {% for asset in page.assets | sort %}
+        {% set height = config.extra.project_image_height %}
+        {% set image = resize_image(path=asset, height=height, op="fit_height") | safe %}
+        {% set thumb = resize_image(path=asset, height=64, op="fit_height") | safe %}
+	<a href="{{ image.url }}" data-thumb={{ thumb.url }}></a>
+      {% endfor %}
+    </div>
+  {% endif %}
+{% endmacro prokrutchik %}
