@@ -8,13 +8,13 @@
     <meta name="theme-color" content="#fff"/>
     <link rel="icon" type="image/png" href="{{ get_url(path="/images/favicon.ico") | safe }}">
     <link rel="mask-icon" href="{{ get_url(path="/favicons/safari-pinned-tab.svg") | safe }}" color="#2c2c2c">
-    <link rel="stylesheet" href="{{ get_url(path="style.css") | safe }}" type="text/css" media="all">
     <script type="text/javascript"
       src="{{ get_url(path="/third_party/jquery/jquery-1.11.1.min.js") }}"></script>
     <link rel="stylesheet" href="{{ get_url(path="/third_party/fotorama/fotorama.css") | safe }}"
       type="text/css" media="all">
     <script src="{{ get_url(path="/third_party/fotorama/fotorama.js") | safe }}"
       type="text/javascript"></script>
+    <link rel="stylesheet" href="{{ get_url(path="style.css") | safe }}" type="text/css" media="all">
     {% block rss %}
       <link rel="alternate" type="application/rss+xml" title="{{ config.title }}" href="{{
         get_url(path="atom.xml", trailing_slash=false) | safe
