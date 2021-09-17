@@ -49,6 +49,6 @@ social = [
 #  { url = "/", name = "RSS" }
 ]
 
-project_image_height = 512
-project_symbol_width = 256
-project_symbol_height = 159
+project_image_height = 800
+project_symbol_width = 412
+project_symbol_height = 256
