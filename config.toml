@@ -1,5 +1,5 @@
 # The URL the site will be built for
-base_url = "http://arka-arch.ru"
+base_url = "https://arka-arch.ru"
 
 title = "Авторская архитектурная студия «Арка»"
 description = ""
