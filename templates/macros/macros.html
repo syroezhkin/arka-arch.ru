@@ -82,8 +82,10 @@
       {% for asset in page.assets | sort %}
 	{% set image = resize_image(path=asset, height=height, op="fit_height") | safe %}
         {% set thumb = resize_image(path=asset, height=64, op="fit_height") | safe %}
-	<a href="{{ image.url }}">
-	  <img src="{{ thumb.url }}" width="{{ thumb.width }}" height="{{ thumb.height }}">
+        <a href="{{ image.url }}"
+           data-thumb="{{ thumb.url }}"
+           data-thumb-width="{{ thumb.width }}"
+           data-thumb-height="{{ thumb.height }}">
 	</a>
       {% endfor %}
     </div>
