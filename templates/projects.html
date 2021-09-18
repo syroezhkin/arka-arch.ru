@@ -2,11 +2,12 @@
 
 {% import "macros/macros.html" as macros %}
 
+{% block title %}{{ config.title }}{% endblock title %}
+
 {% block content %}
   {{ macros::categories(categories = get_taxonomy(kind="categories")) }}
 
   <main>
-    {% block title %} {% endblock title %}
 
     <div class="projects">
       {% for page in section.pages %}
