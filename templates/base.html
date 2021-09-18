@@ -1,3 +1,5 @@
+{% import "macros/macros.html" as macros %}
+
 <!DOCTYPE html>
 
 <html lang="{{ lang }}">
@@ -28,6 +30,8 @@
   </head>
 
   <body class="body">
+
+    {{ macros::yandex_metrika() }}
 
     <header class="header">
       {% if current_path == "/" %}
