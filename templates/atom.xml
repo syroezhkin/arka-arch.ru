@@ -27,13 +27,17 @@
   <link href="{{ page.permalink | safe }}" type="text/html"/>
   <id>{{ page.permalink | safe }}</id>
   <content type="html">
-    {%- set assets = page.assets | sort -%}
-    {%- set image = assets[0] | escape_xml | safe -%}
-    {%- set width = config.extra.project_symbol_width -%}
-    {%- set height = config.extra.project_symbol_height -%}
-    {%- set symbol = resize_image(path=image, width=width, height=height) -%}
-    &lt;p&gt;&lt;img src=&quot;{{ symbol.url }}&quot; alt=&quot;Alt&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+    &lt;a href=&quot;{{ page.permalink | safe }}&quot;&gt;
+      {%- set assets = page.assets | sort -%}
+      {%- set image = assets[0] | escape_xml | safe -%}
+      &lt;p&gt;&lt;img src=&quot;{{ get_url(path=image) | safe }}&quot; alt=&quot;Alt&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+    &lt;&#x2F;a&gt;
     {{ page.content }}
+    &lt;small&gt;
+      &lt;a href=&quot;{{ page.permalink | safe }}&quot;&gt;
+        Подробнее...
+      &lt;&#x2F;a&gt;
+    &lt;&#x2F;small&gt;
   </content>
 </entry>
 {%- endfor %}
