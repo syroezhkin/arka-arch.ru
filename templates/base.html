@@ -73,12 +73,10 @@
             </div>
           {% endfor %}
         {% endif %}
-        {#
         <div class="social__item">
-          Подписка на
-          <a href="{{ get_url(path="atom.xml", trailing_slash=false) | safe }}">RSS</a>
+	  <a href="{{ get_url(path="atom.xml", trailing_slash=false) | safe }}"
+	     alt="Подписка на обновления">RSS</a>
         </div>
-        #}
       </div>
     </header>
 
