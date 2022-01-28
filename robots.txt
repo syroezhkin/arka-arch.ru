@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://arka-arch.ru/sitemap.xml

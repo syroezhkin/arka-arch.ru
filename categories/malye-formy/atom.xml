@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ru">
+  <title>Авторская архитектурная студия «Арка» - Малые формы</title>
+<link href="https://arka-arch.ru/categories/malye-formy/atom.xml" rel="self" type="application/atom+xml"/>
+<link href="https://arka-arch.ru"/>
+<generator uri="https://www.getzola.org/">Zola</generator>
+<updated>2011-01-01T00:00:00+00:00</updated>
+<id>https://arka-arch.ru/categories/malye-formy/atom.xml</id>
+<entry xml:lang="ru">
+  <title>Мемориал Советским воинам</title>
+  <published>2011-01-01T00:00:00+00:00</published>
+  <updated>2011-01-01T00:00:00+00:00</updated>
+  <link href="https://arka-arch.ru/projects/memorial-sovetskim-vojnam/" type="text/html"/>
+  <id>https://arka-arch.ru/projects/memorial-sovetskim-vojnam/</id>
+  <content type="html">
+    &lt;a href=&quot;https://arka-arch.ru/projects/memorial-sovetskim-vojnam/&quot;&gt;&lt;p&gt;&lt;img src=&quot;https://arka-arch.ru/projects/memorial-sovetskim-vojnam/11-01-min.jpg&quot; alt=&quot;Alt&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+    &lt;&#x2F;a&gt;
+    &lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;адрес&lt;&#x2F;strong&gt;: Россия, Калининградская область, город Гвардейск&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;архитекторы&lt;&#x2F;strong&gt;: Вячеслав Уваров, Владимир Сыроежкин, Михаил Никоненко&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;статус&lt;&#x2F;strong&gt;: Концепция&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;год&lt;&#x2F;strong&gt;: 2011&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+
+    &lt;small&gt;
+      &lt;a href=&quot;https://arka-arch.ru/projects/memorial-sovetskim-vojnam/&quot;&gt;
+        Подробнее...
+      &lt;&#x2F;a&gt;
+    &lt;&#x2F;small&gt;
+  </content>
+</entry>
+<entry xml:lang="ru">
+  <title>Дизайн адресных табличек</title>
+  <published>2010-01-01T00:00:00+00:00</published>
+  <updated>2010-01-01T00:00:00+00:00</updated>
+  <link href="https://arka-arch.ru/projects/dizajn-adresnyh-tablichek/" type="text/html"/>
+  <id>https://arka-arch.ru/projects/dizajn-adresnyh-tablichek/</id>
+  <content type="html">
+    &lt;a href=&quot;https://arka-arch.ru/projects/dizajn-adresnyh-tablichek/&quot;&gt;&lt;p&gt;&lt;img src=&quot;https://arka-arch.ru/projects/dizajn-adresnyh-tablichek/18-01-min.jpg&quot; alt=&quot;Alt&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+    &lt;&#x2F;a&gt;
+    &lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;адрес&lt;&#x2F;strong&gt;: Россия, Калининградская область, город Советск&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;архитектор&lt;&#x2F;strong&gt;: Владимир Сыроежкин&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;статус&lt;&#x2F;strong&gt;: Концепция&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;год&lt;&#x2F;strong&gt;: 2010&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+
+    &lt;small&gt;
+      &lt;a href=&quot;https://arka-arch.ru/projects/dizajn-adresnyh-tablichek/&quot;&gt;
+        Подробнее...
+      &lt;&#x2F;a&gt;
+    &lt;&#x2F;small&gt;
+  </content>
+</entry>
+</feed>
+
