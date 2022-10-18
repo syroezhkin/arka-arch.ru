@@ -37,13 +37,13 @@ arkanafts = [
   { image = "/images/anastasia_shurupova.jpg", name = "Анастасия Шурупова", note = "архитектор", mail = "" },
 ]
 
-contacts = [ 
+contacts = [
   "+7 952 110 31 36",
   { url = "mailto:nikonenko@arka-arch.ru", name = "nikonenko@arka-arch.ru" },
   "г. Калининград, ул. Гаражная, д. 2а, каб. №207",
 ]
 
-social = [ 
+social = [
 #  "+7 952 110 31 36",
 #  { url = "/", name = "RSS" }
 ]
