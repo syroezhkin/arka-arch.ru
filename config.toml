@@ -29,12 +29,12 @@ menu_links = [
 ]
 
 arkanafts = [
+  { image = "/images/mikhail_nikonenko.jpg",   name = "Михаил Никоненко",   note = "Руководитель студии", mail="nikonenko@arka-arch.ru" },
   { image = "/images/vyacheslav_uvarov.jpg",   name = "Вячеслав Уваров",    note = "архитектор", mail = "" },
   { image = "/images/vladimir_syroezhkin.jpg", name = "Владимир Сыроежкин", note = "архитектор", mail="syroezhkin@arka-arch.ru" },
-  { image = "/images/mikhail_nikonenko.jpg",   name = "Михаил Никоненко",   note = "архитектор", mail="nikonenko@arka-arch.ru" },
   { image = "/images/dmitriy_kulikov.jpg",     name = "Дмитрий Куликов",    note = "техник-архитектор", mail = "" },
-  { image = "/images/irina_litvinova.jpg",     name = "Ирина Литвинова",    note = "архитектор", mail = "" },
-  { image = "/images/anastasia_shurupova.jpg", name = "Анастасия Шурупова", note = "архитектор", mail = "" },
+  { image = "/images/anastasia_shurupova.jpg", name = "Анастасия Шурупова", note = "архитектор", mail = "shurupova@arka-arch.ru" },
+  { image = "/images/alexandra_poltavtseva.jpg", name = "Александра Полтавцева", note = "архитектор", mail = "poltavceva@arka-arch.ru" },
 ]
 
 contacts = [
